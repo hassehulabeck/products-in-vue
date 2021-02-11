@@ -1,11 +1,13 @@
 <template>
   <div>
-    {{ product.name }}
+    <Product :product="product" />
   </div>
 </template>
 
 <script>
+import Product from "../components/Product.vue";
 export default {
+  components: { Product },
   computed: {
     product() {
       let id = this.$route.params.id;
