@@ -8,9 +8,13 @@ export default new Vuex.Store({
   state: {
     products: []
   },
+  getters: {
+    getProduct: (state) => (id) => {
+      return state.products.find(prod => id == prod.id)
+    }},
   mutations: {
-    GET_PRODUCTS(products) {
-      this.state.products = products
+    GET_PRODUCTS(state, products) {
+      state.products = products
     }
   },
   actions: {

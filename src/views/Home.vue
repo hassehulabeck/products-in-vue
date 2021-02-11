@@ -14,8 +14,5 @@ export default {
   components: {
     Product,
   },
-  mounted() {
-    this.$store.dispatch("getProducts");
-  },
 };
 </script>
