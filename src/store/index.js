@@ -19,7 +19,7 @@ export default new Vuex.Store({
   },
   actions: {
     getProducts({commit}) {
-      axios.get('https://www.hulabeck.se/html/temp/products.json')
+      axios.get('https://www.hulabeck.se/temp/products.json')
         .then((response) => {
           commit('GET_PRODUCTS', response.data.products)
         })
